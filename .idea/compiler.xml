@@ -6,8 +6,24 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common" />
+        <module name="common-api" />
+        <module name="common-infrastructure" />
+        <module name="common-types" />
+        <module name="common-trigger" />
+        <module name="common-app" />
+        <module name="common-domain" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="common" options="-parameters" />
+      <module name="common-api" options="-parameters" />
+      <module name="common-app" options="-parameters" />
+      <module name="common-domain" options="-parameters" />
+      <module name="common-infrastructure" options="-parameters" />
+      <module name="common-trigger" options="-parameters" />
+      <module name="common-types" options="-parameters" />
+    </option>
   </component>
 </project>
