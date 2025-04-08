@@ -12,7 +12,6 @@ import javax.annotation.Resource;
 
 /**
  * Redis 案例；<a href="https://bugstack.cn/md/road-map/redis.html">Redis</a>
- * @author Fuzhengwei bugstack.cn @小傅哥
  */
 @Slf4j
 @RunWith(SpringRunner.class)

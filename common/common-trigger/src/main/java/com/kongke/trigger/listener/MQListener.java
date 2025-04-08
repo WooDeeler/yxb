@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * RocketMQ 接收消息
- * @author Fuzhengwei bugstack.cn @小傅哥
  */
 @Component
 @Slf4j

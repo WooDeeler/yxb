@@ -37,7 +37,7 @@ public class Controller {
         return Response.<String>builder()
                 .code(Constants.ResponseCode.SUCCESS.getCode())
                 .info(Constants.ResponseCode.SUCCESS.getInfo())
-                .data("查询用户信息，小傅哥")
+                .data("查询用户信息")
                 .build();
     }
 
