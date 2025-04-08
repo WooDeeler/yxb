@@ -1,4 +1,4 @@
-package com.kongke.xfg.frame.trigger.http;
+package com.kongke.trigger.http;
 
 import com.kongke.types.common.Constants;
 import com.kongke.types.model.Response;

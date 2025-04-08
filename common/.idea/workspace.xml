@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="19ca8758-c39d-480e-b854-1e26478ffc7f" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/mybatisx/templates.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/data/log/log-error-2025-04-06.0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/data/log/log-error-2025-04-07.0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/data/log/log-info-2025-04-06.0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/data/log/log-info-2025-04-07.0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/data/log/log_error.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/data/log/log_info.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/dto/UserDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/config/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/config/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/interceptor/AuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-app/src/main/resources/mybatis/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/entity/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/vo/UserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/UserDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/impl/UserDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/UserPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-trigger/src/main/java/com/kongke/trigger/http/UserTestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../user/user-trigger/src/main/java/com/kongke/trigger/rpc/UserRpcService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common-trigger/src/main/java/com/kongke/trigger/http/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/common-trigger/src/main/java/com/kongke/trigger/http/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../user/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/dto/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/response/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-app/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/config/ThreadPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/config/ThreadPoolConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/config/ThreadPoolConfigProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/config/ThreadPoolConfigProperties.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/resources/mybatis/mapper/frame_case_mapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/resources/mybatis/mapper/frame_case_mapper.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/xxx/adapter/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/xxx/adapter/port/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/xxx/adapter/repository/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/xxx/model/aggregate/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/aggregate/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/xxx/model/entity/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/entity/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/xxx/model/valobj/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/xxx/service/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/yyy/adapter/repository/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/yyy/model/aggregate/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/yyy/model/entity/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/yyy/model/valobj/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/vo/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/yyy/service/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-infrastructure/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/adapter/port/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/adapter/repository/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/dao/package-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/package-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/dao/po/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/gateway/dto/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/gateway/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-trigger/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-trigger/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-types/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-types/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2vNqxBcl1Tcw6YXQR1jwvDFSZXA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mico/IdeaProjects/yxb/common&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kongke.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="19ca8758-c39d-480e-b854-1e26478ffc7f" name="更改" comment="" />
+      <created>1743996123352</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743996123352</updated>
+      <workItem from="1743996124439" duration="4311000" />
+      <workItem from="1744112569164" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

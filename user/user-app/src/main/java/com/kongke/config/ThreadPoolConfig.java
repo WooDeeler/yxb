@@ -10,13 +10,13 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import java.util.concurrent.*;
 
 @Slf4j
-@EnableAsync
-@Configuration
-@EnableConfigurationProperties(ThreadPoolConfigProperties.class)
+//@EnableAsync
+//@Configuration
+//@EnableConfigurationProperties(ThreadPoolConfigProperties.class)
 public class ThreadPoolConfig {
 
-    @Bean
-    @ConditionalOnMissingBean(ThreadPoolExecutor.class)
+//    @Bean
+//    @ConditionalOnMissingBean(ThreadPoolExecutor.class)
     public ThreadPoolExecutor threadPoolExecutor(ThreadPoolConfigProperties properties) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         // 实例化策略
         RejectedExecutionHandler handler;
