@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="user-infrastructure" />
+        <module name="user-api" />
+        <module name="user-domain" />
+        <module name="user-app" />
+        <module name="user-trigger" />
+        <module name="user-types" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="user" options="-parameters" />
+      <module name="user-api" options="-parameters" />
+      <module name="user-app" options="-parameters" />
+      <module name="user-domain" options="-parameters" />
+      <module name="user-infrastructure" options="-parameters" />
+      <module name="user-trigger" options="-parameters" />
+      <module name="user-types" options="-parameters" />
+    </option>
+  </component>
+</project>
