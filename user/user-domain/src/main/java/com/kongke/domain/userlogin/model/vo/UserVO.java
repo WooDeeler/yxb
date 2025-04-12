@@ -48,4 +48,7 @@ public class UserVO implements Serializable {
      */
     private LocalDateTime updateTime;
 
+
+    private String token;
+
 }

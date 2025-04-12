@@ -4,13 +4,13 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Data
-//@ConfigurationProperties(prefix = "thread.pool.executor.config", ignoreInvalidFields = true)
+@ConfigurationProperties(prefix = "thread.pool.executor.config", ignoreInvalidFields = true)
 public class ThreadPoolConfigProperties {
 
     /** 核心线程数 */
-    private Integer corePoolSize = 20;
+    private Integer corePoolSize = 50;
     /** 最大线程数 */
-    private Integer maxPoolSize = 200;
+    private Integer maxPoolSize = 100;
     /** 最大等待时间 */
     private Long keepAliveTime = 10L;
     /** 最大队列数 */
@@ -21,6 +21,6 @@ public class ThreadPoolConfigProperties {
      * DiscardOldestPolicy：将最早进入队列的任务删除，之后再尝试加入队列的任务被拒绝
      * CallerRunsPolicy：如果任务添加线程池失败，那么主线程自己执行该任务
      * */
-    private String policy = "AbortPolicy";
+    private String policy = "CallerRunsPolicy";
 
 }
