@@ -2,7 +2,13 @@
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/post/post-app/target" />
+      <excludeFolder url="file://$MODULE_DIR$/post/post-domain/target" />
+      <excludeFolder url="file://$MODULE_DIR$/post/post-infrastructure/target" />
+      <excludeFolder url="file://$MODULE_DIR$/post/post-trigger/target" />
+      <excludeFolder url="file://$MODULE_DIR$/post/post-types/target" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
