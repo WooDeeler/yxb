@@ -120,6 +120,18 @@
             <groupId>com.kongke</groupId>
             <artifactId>user-infrastructure</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kongke</groupId>
+            <artifactId>user-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kongke</groupId>
+            <artifactId>user-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kongke</groupId>
+            <artifactId>user-types</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -162,6 +174,13 @@
                     <mainClass>com.kongke.Application</mainClass>
                     <layout>JAR</layout>
                 </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal> <!-- 生成可执行Fat JAR -->
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

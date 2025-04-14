@@ -56,8 +56,15 @@
     </parent>
 
     <dependencyManagement>
-<!--        Dubbo以及nacos相关-->
         <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>3.1.5</version>
+                <scope>import</scope>
+            </dependency>
+            <!--        Dubbo以及nacos相关-->
+
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-core</artifactId>
@@ -232,6 +239,7 @@
                 <artifactId>versions-maven-plugin</artifactId>
                 <version>2.7</version>
             </plugin>
+
         </plugins>
     </build>
 
