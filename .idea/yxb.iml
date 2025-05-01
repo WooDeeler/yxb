@@ -8,6 +8,8 @@
       <excludeFolder url="file://$MODULE_DIR$/post/post-infrastructure/target" />
       <excludeFolder url="file://$MODULE_DIR$/post/post-trigger/target" />
       <excludeFolder url="file://$MODULE_DIR$/post/post-types/target" />
+      <excludeFolder url="file://$MODULE_DIR$/post/.vscode" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -29,7 +29,7 @@ java.lang.ClassNotFoundException: cn.hutool.core.bean.BeanUtil
 	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
 	at java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:566)
 	at com.kongke.infrastructure.persistent.repository.IDisscussPostRepository.getDiscussPostList(IDisscussPostRepository.java:48)
-	at com.kongke.domain.discussPost.service.DiscussPostServiceImpl.getDiscussPostList(DiscussPostServiceImpl.java:26)
+	at com.kongke.domain.discussPost.service.DiscussPostService.getDiscussPostList(DiscussPostServiceImpl.java:26)
 	at com.kongke.trigger.http.DiscussPostController.getDiscussPosts(DiscussPostController.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

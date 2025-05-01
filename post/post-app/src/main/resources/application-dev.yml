@@ -1,5 +1,5 @@
 server:
-  port: 9091
+  port: 8791
 
 # 线程池配置
 #thread:

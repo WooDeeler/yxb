@@ -14,7 +14,7 @@ COPY user-app.jar app.jar
 # COPY config/application.properties /config/
 
 # 3. 设置JVM参数（根据需求调整）
-ENV JAVA_OPTS="-Xms512m -Xmx1024m -Dspring.profiles.active=dev"
+ENV JAVA_OPTS="-Xms256m -Xmx512m -Dspring.profiles.active=dev"
 # 对于微服务，可添加DNS缓存设置：
 # ENV JAVA_OPTS="$JAVA_OPTS -Dsun.net.inetaddr.ttl=60"
 

@@ -7,6 +7,12 @@ bin-release/
 # Other files and folders
 .settings/
 **/data/
+target/
+.idea/
+**/.idea/
+**/.vscode/
+**/docs/
+
 
 # Executables
 *.swf

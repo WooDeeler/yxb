@@ -2,6 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/post/post.iml" filepath="$PROJECT_DIR$/post/post.iml" />
+      <module fileurl="file://$PROJECT_DIR$/post/post-app/post-app.iml" filepath="$PROJECT_DIR$/post/post-app/post-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/post/post-domain/post-domain.iml" filepath="$PROJECT_DIR$/post/post-domain/post-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/post/post-infrastructure/post-infrastructure.iml" filepath="$PROJECT_DIR$/post/post-infrastructure/post-infrastructure.iml" />
+      <module fileurl="file://$PROJECT_DIR$/post/post-trigger/post-trigger.iml" filepath="$PROJECT_DIR$/post/post-trigger/post-trigger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/post/post-types/post-types.iml" filepath="$PROJECT_DIR$/post/post-types/post-types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user/user.iml" filepath="$PROJECT_DIR$/user/user.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/yxb.iml" filepath="$PROJECT_DIR$/.idea/yxb.iml" />
     </modules>
   </component>

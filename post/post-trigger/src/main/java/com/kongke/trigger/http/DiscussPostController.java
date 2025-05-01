@@ -14,9 +14,9 @@ import java.util.List;
  * @date 2025/04/10
  */
 @RestController
-@RequestMapping("/discuss")
+@RequestMapping("/post")
 public class DiscussPostController {
-    private final DiscussPostService discussPostService;
+    private DiscussPostService discussPostService;
 
     public DiscussPostController(DiscussPostService discussPostService) {
         this.discussPostService = discussPostService;
@@ -28,7 +28,7 @@ public class DiscussPostController {
      * @param page 分页参数
      * @return 帖子列表
      */
-    @PostMapping("/posts/list")
+    @PostMapping("/list")
     public Result<List<DiscussPostEntity>> getDiscussPosts(@RequestBody PageParam page) {
         List<DiscussPostEntity> posts = discussPostService.getDiscussPostList(page);
         return Result.success(posts);
@@ -40,7 +40,7 @@ public class DiscussPostController {
      * @param post 帖子信息
      * @return 创建结果
      */
-    @PostMapping("/posts")
+    @PostMapping("/create")
     public Result<Void> createDiscussPost(@RequestBody DiscussPostEntity post) {
         boolean success = discussPostService.createDiscussPost(post);
         return success ? Result.success() : Result.failed("创建帖子失败");
@@ -52,7 +52,7 @@ public class DiscussPostController {
      * @param post   帖子信息
      * @return 更新结果
      */
-    @PostMapping("/posts/update")
+    @PostMapping("/update")
     public Result<Void> updateDiscussPost(@RequestBody DiscussPostEntity post) {
         boolean success = discussPostService.updateDiscussPost(post);
         return success ? Result.success() : Result.failed("更新帖子失败");
@@ -64,8 +64,8 @@ public class DiscussPostController {
      * @param postId 帖子ID
      * @return 删除结果
      */
-    @PostMapping("/posts/delete/{postId}")
-    public Result<Void> deleteDiscussPost(@PathVariable("postId") Long postId) {
+    @PostMapping("/delete")
+    public Result<Void> deleteDiscussPost(@RequestParam("postId") Long postId) {
         boolean success = discussPostService.deleteDiscussPost(postId);
         return success ? Result.success() : Result.failed("删除帖子失败");
     }
