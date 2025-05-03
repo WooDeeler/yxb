@@ -57,4 +57,8 @@ public class UserService {
         BeanUtil.copyProperties(entity,vo);
         return vo;
     }
+
+    public Boolean upsertProfile(UserVO vo) {
+        return userRepository.upsertProfile(vo);
+    }
 }

@@ -2,19 +2,23 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.kongke.infrastructure.persistent.dao.mapper.UserMapper">
+<mapper namespace="com.kongke.infrastructure.dao.mapper.UserMapper">
 
     <resultMap id="BaseResultMap" type="com.kongke.infrastructure.persistent.po.UserPO">
             <id property="id" column="id" />
             <result property="username" column="username" />
             <result property="password" column="password" />
-            <result property="salt" column="salt" />
-            <result property="email" column="email" />
-            <result property="type" column="type" />
-            <result property="status" column="status" />
-            <result property="activationCode" column="activation_code" />
-            <result property="headerUrl" column="header_url" />
-            <result property="createTime" column="create_time" />
+            <result property="phone" column="phone" />
+            <result property="registerTime" column="register_time" />
+            <result property="avatar" column="avatar" />
+            <result property="targetUniversity" column="target_university" />
+            <result property="grade" column="grade" />
+            <result property="major" column="major" />
+            <result property="city" column="city" />
     </resultMap>
 
+    <sql id="Base_Column_List">
+        id,username,password,phone,register_time,avatar,
+        target_university,grade,major,city
+    </sql>
 </mapper>

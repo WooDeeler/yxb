@@ -15,4 +15,6 @@ public interface UserRepository {
     List<UserVO> getUsersByPage(int page, int size);
 
     UserEntity findByUsername(String username);
+
+    Boolean upsertProfile(UserVO vo);
 }

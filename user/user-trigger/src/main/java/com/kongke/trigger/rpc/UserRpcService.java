@@ -1,5 +1,6 @@
 package com.kongke.trigger.rpc;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.kongke.api.IUserService;
 import com.kongke.api.dto.UserDTO;
 import com.kongke.domain.userlogin.model.vo.UserVO;
@@ -25,7 +26,7 @@ public class UserRpcService implements IUserService {
     public UserDTO getUserById(Long id) {
         UserVO vo = userService.getUserById(id);
         UserDTO dto = new UserDTO();
-        dto.setUsername(vo.getUsername());
+        BeanUtil.copyProperties(vo, dto);
         return dto;
     }
 }

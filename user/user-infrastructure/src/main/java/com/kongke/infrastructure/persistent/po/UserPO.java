@@ -8,61 +8,61 @@ import lombok.Data;
 
 /**
  * 
- * @TableName user
+ * @TableName users
  */
-@TableName(value ="user")
+@TableName(value ="users")
 @Data
 public class UserPO {
     /**
-     * 
+     * 用户唯一标识，自增主键
      */
     @TableId(type = IdType.AUTO)
     private Integer id;
 
     /**
-     * 
+     * 用户昵称，用于在系统中显示的名称
      */
     private String username;
 
     /**
-     * 
+     * 用户登录密码，经过加密存储
      */
     private String password;
 
     /**
-     * 
+     * 用户注册时使用的手机号码
      */
-    private String salt;
+    private String phone;
 
     /**
-     * 
+     * 用户注册时间，默认为当前时间
      */
-    private String email;
+    private Date registerTime;
 
     /**
-     * 0-普通用户; 1-超级管理员; 2-版主;
+     * 用户头像的存储路径或 URL
      */
-    private Integer type;
+    private String avatar;
 
     /**
-     * 0-未激活; 1-已激活;
+     * 用户的目标院校名称
      */
-    private Integer status;
+    private String targetUniversity;
 
     /**
-     * 
+     * 用户所在年级，如大一、研二等
      */
-    private String activationCode;
+    private String grade;
 
     /**
-     * 
+     * 用户所学专业名称
      */
-    private String headerUrl;
+    private String major;
 
     /**
-     * 
+     * 用户所在城市
      */
-    private Date createTime;
+    private String city;
 
     @Override
     public boolean equals(Object that) {
@@ -79,13 +79,13 @@ public class UserPO {
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getUsername() == null ? other.getUsername() == null : this.getUsername().equals(other.getUsername()))
             && (this.getPassword() == null ? other.getPassword() == null : this.getPassword().equals(other.getPassword()))
-            && (this.getSalt() == null ? other.getSalt() == null : this.getSalt().equals(other.getSalt()))
-            && (this.getEmail() == null ? other.getEmail() == null : this.getEmail().equals(other.getEmail()))
-            && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
-            && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
-            && (this.getActivationCode() == null ? other.getActivationCode() == null : this.getActivationCode().equals(other.getActivationCode()))
-            && (this.getHeaderUrl() == null ? other.getHeaderUrl() == null : this.getHeaderUrl().equals(other.getHeaderUrl()))
-            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()));
+            && (this.getPhone() == null ? other.getPhone() == null : this.getPhone().equals(other.getPhone()))
+            && (this.getRegisterTime() == null ? other.getRegisterTime() == null : this.getRegisterTime().equals(other.getRegisterTime()))
+            && (this.getAvatar() == null ? other.getAvatar() == null : this.getAvatar().equals(other.getAvatar()))
+            && (this.getTargetUniversity() == null ? other.getTargetUniversity() == null : this.getTargetUniversity().equals(other.getTargetUniversity()))
+            && (this.getGrade() == null ? other.getGrade() == null : this.getGrade().equals(other.getGrade()))
+            && (this.getMajor() == null ? other.getMajor() == null : this.getMajor().equals(other.getMajor()))
+            && (this.getCity() == null ? other.getCity() == null : this.getCity().equals(other.getCity()));
     }
 
     @Override
@@ -95,13 +95,13 @@ public class UserPO {
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getUsername() == null) ? 0 : getUsername().hashCode());
         result = prime * result + ((getPassword() == null) ? 0 : getPassword().hashCode());
-        result = prime * result + ((getSalt() == null) ? 0 : getSalt().hashCode());
-        result = prime * result + ((getEmail() == null) ? 0 : getEmail().hashCode());
-        result = prime * result + ((getType() == null) ? 0 : getType().hashCode());
-        result = prime * result + ((getStatus() == null) ? 0 : getStatus().hashCode());
-        result = prime * result + ((getActivationCode() == null) ? 0 : getActivationCode().hashCode());
-        result = prime * result + ((getHeaderUrl() == null) ? 0 : getHeaderUrl().hashCode());
-        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        result = prime * result + ((getPhone() == null) ? 0 : getPhone().hashCode());
+        result = prime * result + ((getRegisterTime() == null) ? 0 : getRegisterTime().hashCode());
+        result = prime * result + ((getAvatar() == null) ? 0 : getAvatar().hashCode());
+        result = prime * result + ((getTargetUniversity() == null) ? 0 : getTargetUniversity().hashCode());
+        result = prime * result + ((getGrade() == null) ? 0 : getGrade().hashCode());
+        result = prime * result + ((getMajor() == null) ? 0 : getMajor().hashCode());
+        result = prime * result + ((getCity() == null) ? 0 : getCity().hashCode());
         return result;
     }
 
@@ -114,13 +114,13 @@ public class UserPO {
         sb.append(", id=").append(id);
         sb.append(", username=").append(username);
         sb.append(", password=").append(password);
-        sb.append(", salt=").append(salt);
-        sb.append(", email=").append(email);
-        sb.append(", type=").append(type);
-        sb.append(", status=").append(status);
-        sb.append(", activationCode=").append(activationCode);
-        sb.append(", headerUrl=").append(headerUrl);
-        sb.append(", createTime=").append(createTime);
+        sb.append(", phone=").append(phone);
+        sb.append(", registerTime=").append(registerTime);
+        sb.append(", avatar=").append(avatar);
+        sb.append(", targetUniversity=").append(targetUniversity);
+        sb.append(", grade=").append(grade);
+        sb.append(", major=").append(major);
+        sb.append(", city=").append(city);
         sb.append("]");
         return sb.toString();
     }

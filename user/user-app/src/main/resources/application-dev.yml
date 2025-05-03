@@ -46,6 +46,8 @@ dubbo:
   protocol:
     name: dubbo
     port: 20880
+  provider:
+    timeout: 30000
   monitor:
     protocol: registry
 # MyBatis 配置【如需使用记得打开】
@@ -70,5 +72,5 @@ mybatis-plus:
 logging:
   level:
     root: info
-  config: classpath:logback-spring.xml
+#  config: classpath:logback-spring.xml
 

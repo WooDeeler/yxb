@@ -1,6 +1,7 @@
-package com.kongke.domain.userlogin.model.entity;
+package com.kongke.api.dto;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -8,10 +9,18 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.Date;
 
-@AllArgsConstructor
-@NoArgsConstructor
+/**
+ * User DTO
+ *
+ * @author kongke
+ * @date 2025/04/07
+ */
 @Data
-public class UserEntity implements Serializable {
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+public class UserDTO implements Serializable {
+
     private static final long serialVersionUID = 1L;
 
     /**
@@ -24,7 +33,6 @@ public class UserEntity implements Serializable {
      */
     private String username;
 
-    private String password;
 
 
     /**
@@ -61,4 +69,6 @@ public class UserEntity implements Serializable {
      * 用户所在城市
      */
     private String city;
+
+
 }
