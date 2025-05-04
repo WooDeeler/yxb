@@ -52,12 +52,12 @@ public class PostService {
         return res;
     }
 
-    public boolean createPost(PostEntity postEntity) {
-        return postRepository.createPost(postEntity);
+    public boolean createPost(PostVO vo) {
+        return postRepository.createPost(vo);
     }
 
-    public boolean updatePost(PostEntity postEntity) {
-        return postRepository.updatePost(postEntity);
+    public boolean updatePost(PostVO vo) {
+        return postRepository.updatePost(vo);
     }
 
     public boolean deletePost(Long pid) {

@@ -63,7 +63,7 @@ public class PostController {
      * @return 创建结果
      */
     @PostMapping("/create")
-    public Result<Void> createPost(@RequestBody PostEntity post) {
+    public Result<Void> createPost(@RequestBody PostVO post) {
         boolean success = postService.createPost(post);
         return success ? Result.success() : Result.failed("创建帖子失败");
     }
@@ -75,7 +75,7 @@ public class PostController {
      * @return 更新结果
      */
     @PostMapping("/update")
-    public Result<Void> updatePost(@RequestBody PostEntity post) {
+    public Result<Void> updatePost(@RequestBody PostVO post) {
         boolean success = postService.updatePost(post);
         return success ? Result.success() : Result.failed("更新帖子失败");
     }

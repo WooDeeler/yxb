@@ -27,7 +27,7 @@
                   <option name="fileName" value="${domain.fileName}ServiceImpl" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}ServiceImpl.java" />
                   <option name="modulePath" value="$PROJECT_DIR$/post-infrastructure" />
-                  <option name="packageName" value="${domain.basePackage}.service.impl" />
+                  <option name="packageName" value="com.kongke.infrastructure.persistent.dao" />
                 </ModuleInfoGo>
                 <ModuleInfoGo>
                   <option name="basePath" value="${domain.basePath}" />
@@ -47,7 +47,7 @@
                   <option name="fileName" value="${domain.fileName}Service" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}Service.java" />
                   <option name="modulePath" value="$PROJECT_DIR$/post-infrastructure" />
-                  <option name="packageName" value="${domain.basePackage}.service" />
+                  <option name="packageName" value="com.kongke.infrastructure.persistent.dao" />
                 </ModuleInfoGo>
                 <ModuleInfoGo>
                   <option name="basePath" value="src/main/java" />
@@ -57,7 +57,7 @@
                   <option name="fileName" value="${domain.fileName}Mapper" />
                   <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.xml" />
                   <option name="modulePath" value="$PROJECT_DIR$/post-infrastructure" />
-                  <option name="packageName" value="${domain.basePackage}.mapper" />
+                  <option name="packageName" value="com.kongke.infrastructure.persistent.mapper" />
                 </ModuleInfoGo>
               </list>
             </option>
@@ -69,8 +69,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Comment" />
-                  <option name="tableName" value="comments" />
+                  <option name="className" value="News" />
+                  <option name="tableName" value="news" />
                 </TableUIInfo>
               </list>
             </option>

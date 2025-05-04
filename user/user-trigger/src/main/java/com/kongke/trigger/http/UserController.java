@@ -68,6 +68,8 @@ public class UserController {
      */
     @PostMapping("/upsert")
     public Result<Boolean> upsertUserProfile(@RequestBody UserVO vo){
+        if (vo == null || vo.getId() == null)
+            return Result.error(400, "参数错误");
         return Result.success(userService.upsertProfile(vo));
     }
 

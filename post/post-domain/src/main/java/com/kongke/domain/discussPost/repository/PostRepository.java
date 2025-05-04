@@ -19,10 +19,10 @@ public interface PostRepository {
     List<PostEntity> getPostList(PageParam page);
 
     // 创建帖子
-    boolean createPost(PostEntity postEntity);
+    boolean createPost(PostVO vo);
 
     // 更新帖子
-    boolean updatePost(PostEntity postEntity);
+    boolean updatePost(PostVO vo);
 
     // 删除帖子
     boolean deletePost(Long pid);

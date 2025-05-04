@@ -2,6 +2,7 @@ package com.kongke.infrastructure.persistent.repository;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.kongke.domain.discussPost.model.entity.PostEntity;
+import com.kongke.domain.discussPost.model.vo.PostVO;
 import com.kongke.domain.discussPost.repository.PostRepository;
 import com.kongke.infrastructure.persistent.dao.PostDao;
 import com.kongke.types.common.PageParam;
@@ -23,12 +24,12 @@ public class IPostRepository implements PostRepository {
     @Autowired
     private PostDao postDao;
 
-    private PostPO convertToPO(PostEntity entity) {
-        if (entity == null) {
+    private PostPO VOConvertToPO(PostVO vo) {
+        if (vo == null) {
             return null;
         }
         PostPO po = new PostPO();
-        BeanUtil.copyProperties(entity, po);
+        BeanUtil.copyProperties(vo, po);
         return po;
     }
 
@@ -43,22 +44,27 @@ public class IPostRepository implements PostRepository {
 
     @Override
     public List<PostEntity> getPostList(PageParam page) {
+        if (page == null)
+            return Collections.emptyList();
         Page<PostPO> pageParam = new Page<>(page.getPage(), page.getSize());
         Page<PostPO> poPage = postDao.page(pageParam);
+        if (poPage.getRecords().isEmpty()) {
+            return Collections.emptyList();
+        }
         return poPage.getRecords().stream()
                 .map(this::convertToEntity)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public boolean createPost(PostEntity postEntity) {
-        PostPO po = convertToPO(postEntity);
+    public boolean createPost(PostVO vo) {
+        PostPO po = VOConvertToPO(vo);
         return postDao.save(po);
     }
 
     @Override
-    public boolean updatePost(PostEntity postEntity) {
-        PostPO po = convertToPO(postEntity);
+    public boolean updatePost(PostVO vo) {
+        PostPO po = VOConvertToPO(vo);
         return postDao.updateById(po);
     }
 
