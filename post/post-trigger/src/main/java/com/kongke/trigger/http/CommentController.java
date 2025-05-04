@@ -2,6 +2,7 @@ package com.kongke.trigger.http;
 
 import com.kongke.domain.discussPost.model.vo.CommentVO;
 import com.kongke.domain.discussPost.service.CommentService;
+import com.kongke.types.common.Result;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 

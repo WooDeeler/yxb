@@ -3,6 +3,7 @@ package com.kongke.trigger.http;
 import com.kongke.domain.discussPost.model.vo.NewsVO;
 import com.kongke.domain.discussPost.service.NewsService;
 import com.kongke.types.common.PageParam;
+import com.kongke.types.common.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;

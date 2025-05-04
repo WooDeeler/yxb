@@ -1,9 +1,9 @@
 package com.kongke.trigger.http;
 
-import com.kongke.domain.discussPost.model.entity.PostEntity;
 import com.kongke.domain.discussPost.model.vo.PostVO;
 import com.kongke.domain.discussPost.service.PostService;
 import com.kongke.types.common.PageParam;
+import com.kongke.types.common.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
