@@ -28,4 +28,6 @@ public interface PostRepository {
     boolean deletePost(Long pid);
 
     PostEntity getPostById(Long postId);
+
+    List<PostEntity> getPostByUid(Integer uid);
 }

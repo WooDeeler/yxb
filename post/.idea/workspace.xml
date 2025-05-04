@@ -8,71 +8,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad35d625-08d4-49dd-8491-67791d7ae15b" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/post-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-api/src/main/java/com/kongke/api/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-api/src/main/java/com/kongke/api/dto/UserDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-app/src/main/resources/mybatis/mapper/PostMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/repository/PostRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/PostService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/PostDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/PostDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/PostMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IPostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/entity/CommentEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/vo/CommentVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/CommentPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/ICommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/log_error.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/log/log_info.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-app/src/main/java/com/kongke/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-app/src/main/java/com/kongke/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-app/src/main/java/com/kongke/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-app/src/main/java/com/kongke/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-app/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-app/src/main/resources/mybatis/mapper/DiscussPostMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/adapter/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/aggregate/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/entity/DiscussPostEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/entity/PostEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/entity/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/vo/DiscussPostVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/vo/PostVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/vo/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/repository/DiscussPostRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/DiscussPostService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/post-infrastructure/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/gateway/adapter/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/gateway/api/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/gateway/dto/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/DiscussPostDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/DiscussPostDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/DiscussPostMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/DiscussPostPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/PostPO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IDisscussPostRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/DiscussPostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/job/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/listener/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/.idea/mybatisx/templates.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/interceptor/AuthInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/interceptor/AuthInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/java/com/kongke/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/resources/application-prod.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/resources/application-test.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/resources/mybatis/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/resources/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/aggregate/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/entity/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/vo/UserVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/vo/UserVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/model/vo/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-api/src/main/java/com/kongke/api/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-api/src/main/java/com/kongke/api/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/vo/PostVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/vo/PostVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/repository/PostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/repository/PostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IPostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IPostRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-types/src/main/java/com/kongke/types/common/PageParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-types/src/main/java/com/kongke/types/common/PageParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-api/src/main/java/com/kongke/api/IUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-domain/src/main/java/com/kongke/domain/userlogin/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/impl/UserDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/UserPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/UserPO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IUserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user/user-trigger/src/main/java/com/kongke/trigger/http/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-trigger/src/main/java/com/kongke/trigger/http/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../user/user-trigger/src/main/java/com/kongke/trigger/rpc/UserRpcService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-trigger/src/main/java/com/kongke/trigger/rpc/UserRpcService.java" afterDir="false" />
@@ -85,8 +40,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -104,6 +59,7 @@
 }</component>
   <component name="ProjectId" id="2vWj37RoDPIy9jEaAeItNwvpCH5" />
   <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -143,7 +99,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.32413793",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "com.itangcent.idea.plugin.configurable.ProxyConfigurable.apifox",
+    "settings.editor.selected.configurable": "com.itangcent.idea.plugin.configurable.AccountConfigurable.apifox",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -161,11 +117,11 @@
       <recent name="com.kongke.infrastructure.persistent.mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.kongke.domain.discussPost.model.entity" />
       <recent name="com.kongke.infrastructure.persistent.dao" />
       <recent name="com.kongke.api" />
       <recent name="com.kongke.api.dto" />
       <recent name="com.kongke.domain.discussPost.adapter" />
-      <recent name="com.kongke.infrastructure.persistent.repository" />
     </key>
   </component>
   <component name="RunManager">

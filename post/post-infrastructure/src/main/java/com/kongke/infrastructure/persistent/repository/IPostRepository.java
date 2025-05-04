@@ -1,5 +1,6 @@
 package com.kongke.infrastructure.persistent.repository;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.kongke.domain.discussPost.model.entity.PostEntity;
 import com.kongke.domain.discussPost.repository.PostRepository;
 import com.kongke.infrastructure.persistent.dao.PostDao;
@@ -12,6 +13,7 @@ import com.kongke.infrastructure.persistent.po.PostPO;
 import cn.hutool.core.bean.BeanUtil;
 
 import javax.annotation.Resource;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -41,7 +43,7 @@ public class IPostRepository implements PostRepository {
 
     @Override
     public List<PostEntity> getPostList(PageParam page) {
-        Page<PostPO> pageParam = new Page<>(page.getPageNum(), page.getPageSize());
+        Page<PostPO> pageParam = new Page<>(page.getPage(), page.getSize());
         Page<PostPO> poPage = postDao.page(pageParam);
         return poPage.getRecords().stream()
                 .map(this::convertToEntity)
@@ -69,5 +71,19 @@ public class IPostRepository implements PostRepository {
     public PostEntity getPostById(Long postId) {
         PostPO po = postDao.getById(postId);
         return convertToEntity(po);
+    }
+
+    @Override
+    public List<PostEntity> getPostByUid(Integer uid) {
+        LambdaQueryWrapper<PostPO> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(PostPO::getAuthorId, uid);
+        List<PostPO> postPOList = postDao.list(wrapper);
+        if (postPOList.isEmpty()) {
+            return Collections.emptyList();
+        }
+        return postPOList.stream()
+                .map(this::convertToEntity)
+                .collect(Collectors.toList());
+
     }
 }

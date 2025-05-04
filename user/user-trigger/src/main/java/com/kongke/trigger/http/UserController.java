@@ -42,7 +42,7 @@ public class UserController {
      * @return {@link Result }<{@link UserVO }>
      */
     @GetMapping("/getUser")
-    public Result<UserVO> getUser(@RequestParam("uid") Long uid) {
+    public Result<UserVO> getUser(@RequestParam("uid") Integer uid) {
         return Result.success(userService.getUserById(uid));
     }
 

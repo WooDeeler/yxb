@@ -2,6 +2,10 @@ package com.kongke.api;
 
 import com.kongke.api.dto.UserDTO;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 /**
  * api接口
  *
@@ -9,5 +13,7 @@ import com.kongke.api.dto.UserDTO;
  * @date 2025/04/07
  */
 public interface IUserService {
-    UserDTO getUserById(Long id);
+    UserDTO getUserById(Integer id);
+
+    Map<Integer, UserDTO> batchQueryByIds(List<Integer> ids);
 }

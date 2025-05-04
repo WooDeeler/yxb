@@ -30,7 +30,7 @@ public class PostVO implements Serializable {
     private String userName;
     private String avatar;
     private String userUniversity;
-    private Boolean isLiked;
+    private boolean isLiked;
 
     /**
      * 帖子发布时间，默认为当前时间

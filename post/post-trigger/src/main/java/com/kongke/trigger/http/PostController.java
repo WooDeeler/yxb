@@ -46,6 +46,17 @@ public class PostController {
     }
 
     /**
+     * 查询用户帖子
+     *
+     * @param uid uid
+     * @return {@link Result }<{@link List }<{@link PostVO }>>
+     */
+    @PostMapping("/userPost")
+    public Result<List<PostVO>> getPostByUid(@RequestParam("uid") Integer uid){
+        return Result.success(postService.getPostByUid(uid));
+    }
+
+    /**
      * 创建帖子
      *
      * @param post 帖子信息
