@@ -9,7 +9,7 @@ import com.kongke.domain.univ.model.vo.UniversityVO;
 import com.kongke.domain.univ.repo.UniversityRepo;
 import com.kongke.infrastructure.dao.UniversityDao;
 import com.kongke.infrastructure.po.UniversityPO;
-import com.kongke.infrastructure.utils.Convert;
+import com.kongke.domain.univ.utils.Convert;
 import com.kongke.types.common.PageParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -65,7 +65,7 @@ public class IUniversityRepo implements UniversityRepo {
 
         wrapper.eq(StrUtil.isNotBlank(req.getCity()), UniversityPO::getCity, req.getCity());
         wrapper.eq(StrUtil.isNotBlank(req.getType()),UniversityPO::getType, req.getType());
-        wrapper.like(StrUtil.isNotBlank(req.getName()),UniversityPO::getName, req.getName());
+        wrapper.like(StrUtil.isNotBlank(req.getUnivName()),UniversityPO::getName, req.getUnivName());
         List<UniversityPO> list = universityDao.list(wrapper);
         if (list != null && !list.isEmpty()) {
             return list.stream().map(po -> Convert.convert(po, UniversityEntity.class)).collect(Collectors.toList());

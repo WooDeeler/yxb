@@ -1,4 +1,4 @@
-package com.kongke.infrastructure.utils;
+package com.kongke.domain.univ.utils;
 
 import cn.hutool.core.bean.BeanUtil;
 
