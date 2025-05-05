@@ -12,6 +12,30 @@
     <packaging>jar</packaging>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-registry-nacos</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.nacos</groupId>
+            <artifactId>nacos-client</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
@@ -95,6 +119,18 @@
         <dependency>
             <groupId>com.kongke</groupId>
             <artifactId>post-infrastructure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kongke</groupId>
+            <artifactId>post-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kongke</groupId>
+            <artifactId>post-types</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.kongke</groupId>
+            <artifactId>post-api</artifactId>
         </dependency>
     </dependencies>
 

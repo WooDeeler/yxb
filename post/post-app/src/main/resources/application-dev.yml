@@ -36,9 +36,26 @@ spring:
     database: 0           # 数据库索引（0-15）
     timeout: 3000         # 连接超时（毫秒）
 
+dubbo:
+  application:
+    name: post-consumer
+  registry:
+    address: nacos://119.29.191.232:8848
+    username: nacos
+    password: nacos
+    parameters:
+      namespace: public
+  consumer:
+    check: false # 启动时不检查提供者是否可用
+    timeout: 30000
+    retries: 0   # 快速失败
+  protocol:
+    name: dubbo
+    port: 20880
+
 #dubbo:
 #  application:
-#    name: user-service-provider
+#    name: post-service-provider
 #  registry:
 #    address: nacos://119.29.191.232:8848
 #    username: nacos
@@ -70,5 +87,5 @@ mybatis-plus:
 logging:
   level:
     root: info
-  config: classpath:logback-spring.xml
+#  config: classpath:logback-spring.xml
 

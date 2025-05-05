@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kongke.infrastructure.persistent.mapper.NewsMapper">
+
+    <resultMap id="BaseResultMap" type="com.kongke.infrastructure.persistent.po.NewsPO">
+            <id property="id" column="id" />
+            <result property="theme" column="theme" />
+            <result property="title" column="title" />
+            <result property="images" column="images" />
+            <result property="content" column="content" />
+            <result property="tags" column="tags" />
+            <result property="relatedUniversity" column="related_university" />
+            <result property="publishSource" column="publish_source" />
+            <result property="publishTime" column="publish_time" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,theme,title,images,content,tags,
+        related_university,publish_source,publish_time
+    </sql>
+</mapper>

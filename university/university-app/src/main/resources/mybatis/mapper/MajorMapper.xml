@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.kongke.infrastructure.mapper.MajorMapper">
+
+    <resultMap id="BaseResultMap" type="com.kongke.infrastructure.po.MajorPO">
+            <id property="id" column="id" />
+            <result property="universityId" column="university_id" />
+            <result property="majorName" column="major_name" />
+            <result property="years" column="years" />
+            <result property="type" column="type" />
+            <result property="score" column="score" />
+            <result property="countryScore" column="country_score" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,university_id,major_name,years,type,score,
+        country_score
+    </sql>
+</mapper>

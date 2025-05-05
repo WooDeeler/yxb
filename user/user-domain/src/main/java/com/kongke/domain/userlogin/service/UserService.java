@@ -6,6 +6,7 @@ import com.kongke.domain.userlogin.model.vo.UserVO;
 import com.kongke.domain.userlogin.repository.UserRepository;
 import com.kongke.domain.userlogin.utils.SecurityUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import lombok.extern.flogger.Flogger;
@@ -25,7 +26,7 @@ public class UserService {
     @Autowired
     private UserRepository userRepository;
 
-    public UserVO getUserById(Long id) {
+    public UserVO getUserById(Integer id) {
         return userRepository.getUserById(id);
     }
 
@@ -56,5 +57,20 @@ public class UserService {
         UserVO vo = new UserVO();
         BeanUtil.copyProperties(entity,vo);
         return vo;
+    }
+
+    public Boolean upsertProfile(UserVO vo) {
+        return userRepository.upsertProfile(vo);
+    }
+
+    public List<UserVO> batchQueryByIds(List<Integer> ids) {
+        List<UserEntity> entities = userRepository.batchQueryByIds(ids);
+        ArrayList<UserVO> vos = new ArrayList<>();
+        for (UserEntity entity : entities) {
+            UserVO vo = new UserVO();
+            BeanUtil.copyProperties(entity, vo);
+            vos.add(vo);
+        }
+        return vos;
     }
 }
