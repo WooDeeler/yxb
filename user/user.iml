@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/.idea/httpRequests" />
       <excludeFolder url="file://$MODULE_DIR$/data" />
       <excludeFolder url="file://$MODULE_DIR$/docs/dev-ops/mysql" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/.cache" />
     </content>
   </component>
 </module>

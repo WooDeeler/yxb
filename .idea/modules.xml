@@ -8,6 +8,8 @@
       <module fileurl="file://$PROJECT_DIR$/post/post-infrastructure/post-infrastructure.iml" filepath="$PROJECT_DIR$/post/post-infrastructure/post-infrastructure.iml" />
       <module fileurl="file://$PROJECT_DIR$/post/post-trigger/post-trigger.iml" filepath="$PROJECT_DIR$/post/post-trigger/post-trigger.iml" />
       <module fileurl="file://$PROJECT_DIR$/post/post-types/post-types.iml" filepath="$PROJECT_DIR$/post/post-types/post-types.iml" />
+      <module fileurl="file://$PROJECT_DIR$/university/university.iml" filepath="$PROJECT_DIR$/university/university.iml" />
+      <module fileurl="file://$PROJECT_DIR$/university/university-app/university-app.iml" filepath="$PROJECT_DIR$/university/university-app/university-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/user/user.iml" filepath="$PROJECT_DIR$/user/user.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/yxb.iml" filepath="$PROJECT_DIR$/.idea/yxb.iml" />
     </modules>
