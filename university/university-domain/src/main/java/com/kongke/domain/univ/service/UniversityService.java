@@ -2,6 +2,7 @@ package com.kongke.domain.univ.service;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.kongke.domain.univ.model.dto.ConditionReq;
+import com.kongke.domain.univ.model.dto.PageQueryRsp;
 import com.kongke.domain.univ.model.entity.UniversityEntity;
 import com.kongke.domain.univ.model.vo.UniversityVO;
 import com.kongke.domain.univ.repo.UniversityRepo;
@@ -30,8 +31,9 @@ public class UniversityService {
         return vos;
     }
 
-    public List<UniversityVO> pageList(PageParam pageParam) {
-        return listEntityConvertVO(universityRepo.pageList(pageParam));
+    public PageQueryRsp<UniversityVO> pageList(PageParam pageParam) {
+        PageQueryRsp<UniversityEntity> rsp = universityRepo.pageList(pageParam);
+        return new PageQueryRsp<>(rsp.getTotal(), listEntityConvertVO(rsp.getList()));
     }
 
     public UniversityVO getById(Integer id) {
@@ -55,7 +57,8 @@ public class UniversityService {
         return universityRepo.delete(id);
     }
 
-    public List<UniversityVO> conditionQuery(ConditionReq req) {
-        return listEntityConvertVO(universityRepo.conditionQuery(req));
+    public PageQueryRsp<UniversityVO> conditionQuery(ConditionReq req) {
+        PageQueryRsp<UniversityEntity> rsp = universityRepo.conditionQuery(req);
+        return new PageQueryRsp<>(rsp.getTotal(), listEntityConvertVO(rsp.getList()));
     }
 }

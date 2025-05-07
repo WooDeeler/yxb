@@ -1,6 +1,7 @@
 package com.kongke.trigger.http;
 
 import com.kongke.domain.univ.model.dto.ConditionReq;
+import com.kongke.domain.univ.model.dto.PageQueryRsp;
 import com.kongke.domain.univ.model.vo.MajorVO;
 import com.kongke.domain.univ.service.MajorService;
 import com.kongke.types.common.Result;
@@ -65,7 +66,7 @@ public class MajorController {
      * @return {@link Result }<{@link List }<{@link MajorVO }>>
      */
     @PostMapping("/condQuery")
-    public Result<List<MajorVO>> Query(@RequestBody ConditionReq req) {
+    public Result<PageQueryRsp<MajorVO>> Query(@RequestBody ConditionReq req) {
         return Result.success(majorService.conditionQuery(req));
     }
 

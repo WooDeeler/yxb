@@ -19,6 +19,11 @@ public class MajorVO {
     private Integer universityId;
 
     /**
+     * 院校名称
+     */
+    private String universityName;
+
+    /**
      * 专业的名称
      */
     private String majorName;
