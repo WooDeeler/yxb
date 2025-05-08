@@ -31,6 +31,7 @@ public class IStudyResRepo implements StudyResRepo {
         LambdaQueryWrapper<StudyResPO> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(req.getFileType() != null,StudyResPO::getFileType, req.getFileType());
         wrapper.eq(req.getMaterialType() != null, StudyResPO::getMaterialType, req.getMaterialType());
+        wrapper.orderByDesc(StudyResPO::getUpdateTime);
         Page<StudyResPO> res = studyResDao.page(page, wrapper);
         List<StudyResPO> pos = res.getRecords();
         if (CollUtil.isEmpty(pos))

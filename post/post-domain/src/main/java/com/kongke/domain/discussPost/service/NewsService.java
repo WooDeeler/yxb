@@ -1,10 +1,14 @@
 package com.kongke.domain.discussPost.service;
 
 import cn.hutool.core.bean.BeanUtil;
+import com.kongke.api.IUniversityService;
+import com.kongke.api.IUserService;
+import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.entity.NewsEntity;
 import com.kongke.domain.discussPost.model.vo.NewsVO;
 import com.kongke.domain.discussPost.repository.NewsRepository;
 import com.kongke.types.common.PageParam;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,15 +21,16 @@ public class NewsService {
     @Autowired
     private NewsRepository newsRepository;
 
-    public List<NewsVO> listNews(PageParam pageParam) {
-        List<NewsEntity> entities = newsRepository.listNews(pageParam);
+    public PageQueryRsp<NewsVO> listNews(PageParam pageParam) {
+        PageQueryRsp<NewsEntity> rsp = newsRepository.listNews(pageParam);
+        List<NewsEntity> entities = rsp.getList();
         List<NewsVO> vos = new ArrayList<>();
         for(NewsEntity e : entities) {
             NewsVO vo = new NewsVO();
             BeanUtil.copyProperties(e, vo);
             vos.add(vo);
         }
-        return vos;
+        return new PageQueryRsp<>(rsp.getTotal(), vos);
     }
 
     public boolean createNews(NewsVO news) {

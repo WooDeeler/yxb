@@ -1,5 +1,6 @@
 package com.kongke.domain.discussPost.repository;
 
+import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.entity.NewsEntity;
 import com.kongke.domain.discussPost.model.vo.NewsVO;
 import com.kongke.types.common.PageParam;
@@ -7,7 +8,7 @@ import com.kongke.types.common.PageParam;
 import java.util.List;
 
 public interface NewsRepository {
-    List<NewsEntity> listNews(PageParam pageParam);
+    PageQueryRsp<NewsEntity> listNews(PageParam pageParam);
 
     boolean createNews(NewsVO news);
 

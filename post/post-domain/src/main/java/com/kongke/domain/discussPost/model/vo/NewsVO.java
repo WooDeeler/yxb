@@ -36,7 +36,7 @@ public class NewsVO {
     /**
      * 新闻资讯关联的院校id
      */
-    private Integer relatedUniversity;
+    private String relatedUniversity;
 
     /**
      * 新闻资讯的发布来源，如网站、媒体等
