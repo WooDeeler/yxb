@@ -5,6 +5,10 @@ import lombok.Data;
 @Data
 public class ConditionReq {
 
+    private int page = 1;
+
+    private int size = 10;
+
     /**
      * 类型
      */

@@ -4,6 +4,7 @@ import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.kongke.domain.univ.model.dto.ConditionReq;
+import com.kongke.domain.univ.model.dto.PageQueryRsp;
 import com.kongke.domain.univ.model.entity.UniversityEntity;
 import com.kongke.domain.univ.model.vo.UniversityVO;
 import com.kongke.domain.univ.repo.UniversityRepo;
@@ -14,7 +15,6 @@ import com.kongke.types.common.PageParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -25,14 +25,15 @@ public class IUniversityRepo implements UniversityRepo {
     private UniversityDao universityDao;
 
     @Override
-    public List<UniversityEntity> pageList(PageParam pageParam) {
+    public PageQueryRsp<UniversityEntity> pageList(PageParam pageParam) {
         if (pageParam == null)
-            return Collections.emptyList();
+            return new PageQueryRsp<>();
         Page<UniversityPO> page = new Page<>(pageParam.getPage(), pageParam.getSize());
         Page<UniversityPO> res = universityDao.page(page);
-        return res.getRecords().stream()
+        List<UniversityEntity> list = res.getRecords().stream()
                 .map(po -> Convert.convert(po, UniversityEntity.class))
                 .collect(Collectors.toList());
+        return new PageQueryRsp<>(res.getTotal(), list);
     }
 
     @Override
@@ -58,18 +59,24 @@ public class IUniversityRepo implements UniversityRepo {
     }
 
     @Override
-    public List<UniversityEntity> conditionQuery(ConditionReq req) {
+    public PageQueryRsp<UniversityEntity> conditionQuery(ConditionReq req) {
         if (req == null)
-            return Collections.emptyList();
-        LambdaQueryWrapper<UniversityPO> wrapper = new LambdaQueryWrapper<>();
+            return new PageQueryRsp<>();
 
+        System.out.println(req);
+
+        Page<UniversityPO> page = new Page<>(req.getPage(), req.getSize());
+        LambdaQueryWrapper<UniversityPO> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(StrUtil.isNotBlank(req.getCity()), UniversityPO::getCity, req.getCity());
         wrapper.eq(StrUtil.isNotBlank(req.getType()),UniversityPO::getType, req.getType());
         wrapper.like(StrUtil.isNotBlank(req.getUnivName()),UniversityPO::getName, req.getUnivName());
-        List<UniversityPO> list = universityDao.list(wrapper);
-        if (list != null && !list.isEmpty()) {
-            return list.stream().map(po -> Convert.convert(po, UniversityEntity.class)).collect(Collectors.toList());
-        }
-        return Collections.emptyList();
+        Page<UniversityPO> list = universityDao.page(page, wrapper);
+
+        System.out.println(list.toString());
+
+        List<UniversityEntity> entities = list.getRecords().stream()
+                .map(po -> Convert.convert(po, UniversityEntity.class))
+                .collect(Collectors.toList());
+        return new PageQueryRsp<>(list.getTotal(), entities);
     }
 }

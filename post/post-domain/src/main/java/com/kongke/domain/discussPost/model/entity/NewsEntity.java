@@ -34,9 +34,9 @@ public class NewsEntity {
     private String tags;
 
     /**
-     * 新闻资讯关联的院校id
+     * 新闻资讯关联的院校
      */
-    private Integer relatedUniversity;
+    private String relatedUniversity;
 
     /**
      * 新闻资讯的发布来源，如网站、媒体等

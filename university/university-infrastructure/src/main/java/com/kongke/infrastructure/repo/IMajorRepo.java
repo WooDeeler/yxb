@@ -2,7 +2,9 @@ package com.kongke.infrastructure.repo;
 
 import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.kongke.domain.univ.model.dto.ConditionReq;
+import com.kongke.domain.univ.model.dto.PageQueryRsp;
 import com.kongke.domain.univ.model.entity.MajorEntity;
 import com.kongke.domain.univ.model.vo.MajorVO;
 import com.kongke.domain.univ.repo.MajorRepo;
@@ -38,19 +40,23 @@ public class IMajorRepo implements MajorRepo {
     }
 
     @Override
-    public List<MajorEntity> query(ConditionReq req) {
+    public PageQueryRsp<MajorEntity> query(ConditionReq req) {
         if (req == null || req.getUnivId() == null){
-            return Collections.emptyList();
+            return new PageQueryRsp<>();
         }
+        Page<MajorPO> page = new Page<>(req.getPage(), req.getSize());
         LambdaQueryWrapper<MajorPO> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(MajorPO::getUniversityId, req.getUnivId());
         wrapper.eq(StrUtil.isNotBlank(req.getYears()), MajorPO::getYears, req.getYears());
         wrapper.eq(StrUtil.isNotBlank(req.getType()), MajorPO::getType, req.getType());
-        List<MajorPO> pos = majorDao.list(wrapper);
+        wrapper.orderByDesc(MajorPO::getYears);
+        Page<MajorPO> res = majorDao.page(page, wrapper);
+        List<MajorPO> pos = res.getRecords();
         if (pos != null && !pos.isEmpty()) {
-            return pos.stream().map(po -> Convert.convert(po, MajorEntity.class)).collect(Collectors.toList());
+            List<MajorEntity> collect = pos.stream().map(po -> Convert.convert(po, MajorEntity.class)).collect(Collectors.toList());
+            return new PageQueryRsp<>(res.getTotal(), collect);
         }
-        return Collections.emptyList();
+        return new PageQueryRsp<>();
     }
 
 

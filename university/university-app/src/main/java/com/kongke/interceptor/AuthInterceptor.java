@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author kongke
  * @date 2025/04/06
  */
-@Component
+//@Component
 public class AuthInterceptor implements HandlerInterceptor {
 
     @Override

@@ -1,5 +1,6 @@
 package com.kongke.trigger.http;
 
+import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.vo.NewsVO;
 import com.kongke.domain.discussPost.service.NewsService;
 import com.kongke.types.common.PageParam;
@@ -30,7 +31,7 @@ public class NewsController {
      * @return {@link Result}<{@link List}<{@link NewsVO}>>
      */
     @PostMapping("/list")
-    public Result<List<NewsVO>> listNews(@RequestBody PageParam pageParam) {
+    public Result<PageQueryRsp<NewsVO>> listNews(@RequestBody PageParam pageParam) {
         return Result.success(service.listNews(pageParam));
     }
 

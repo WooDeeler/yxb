@@ -1,5 +1,6 @@
 package com.kongke.trigger.http;
 
+import com.kongke.domain.univ.model.dto.PageQueryRsp;
 import com.kongke.domain.univ.model.vo.UniversityVO;
 import com.kongke.domain.univ.service.UniversityService;
 import com.kongke.domain.univ.model.dto.ConditionReq;
@@ -30,7 +31,7 @@ public class UniversityController {
      * @return {@link Result }<{@link List }<{@link UniversityVO }>>
      */
     @PostMapping("/page")
-    public Result<List<UniversityVO>> page(@RequestBody PageParam pageParam) {
+    public Result<PageQueryRsp<UniversityVO>> page(@RequestBody PageParam pageParam) {
         return Result.success(universityService.pageList(pageParam));
     }
 
@@ -52,7 +53,7 @@ public class UniversityController {
      * @return {@link Result }<{@link List }<{@link UniversityVO }>>
      */
     @PostMapping("/condQuery")
-    public Result<List<UniversityVO>> conditionQuery(@RequestBody ConditionReq req) {
+    public Result<PageQueryRsp<UniversityVO>> conditionQuery(@RequestBody ConditionReq req) {
         return Result.success(universityService.conditionQuery(req));
     }
 

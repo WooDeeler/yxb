@@ -15,6 +15,20 @@
     <file url="file://$PROJECT_DIR$/common/common-types/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-app/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-app/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-domain/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-domain/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-infrastructure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-infrastructure/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-trigger/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-trigger/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-types/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/university/university-types/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user/user-api/src/main/java" charset="UTF-8" />

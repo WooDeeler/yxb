@@ -1,5 +1,6 @@
 package com.kongke.trigger.http;
 
+import cn.hutool.core.util.StrUtil;
 import com.kongke.domain.common.model.Result;
 import com.kongke.domain.userlogin.model.dto.LoginRequest;
 import com.kongke.domain.userlogin.model.vo.UserVO;
@@ -82,6 +83,7 @@ public class UserController {
     @PostMapping("/login")
     public Result<UserVO> login(@RequestBody LoginRequest request) {
         UserVO vo = userService.login(request.getUsername(), request.getPassword());
-        return Result.success(vo);
+        System.out.println(vo);
+        return StrUtil.isBlank(vo.getUsername()) ? Result.error(510, "登陆失败") : Result.success(vo);
     }
 }

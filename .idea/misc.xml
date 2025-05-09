@@ -6,7 +6,19 @@
       <list>
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/user/pom.xml" />
+        <option value="$PROJECT_DIR$/university/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/common/common-api/pom.xml" />
+        <option value="$PROJECT_DIR$/common/common-app/pom.xml" />
+        <option value="$PROJECT_DIR$/common/common-domain/pom.xml" />
+        <option value="$PROJECT_DIR$/common/common-infrastructure/pom.xml" />
+        <option value="$PROJECT_DIR$/common/common-trigger/pom.xml" />
+        <option value="$PROJECT_DIR$/common/common-types/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="corretto-1.8" project-jdk-type="JavaSDK">

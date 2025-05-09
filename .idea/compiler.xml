@@ -6,20 +6,29 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="common-api" />
-        <module name="common-infrastructure" />
+        <module name="university-api" />
+        <module name="university-types" />
         <module name="user-infrastructure" />
         <module name="user-api" />
         <module name="user-domain" />
         <module name="user-app" />
-        <module name="common-trigger" />
+        <module name="university-trigger" />
         <module name="user-types" />
-        <module name="common-app" />
-        <module name="common-domain" />
-        <module name="common-types" />
+        <module name="university-infrastructure" />
+        <module name="university-app" />
+        <module name="university-domain" />
         <module name="user-trigger" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="common" target="1.8" />
+      <module name="common-api" target="1.8" />
+      <module name="common-app" target="1.8" />
+      <module name="common-domain" target="1.8" />
+      <module name="common-infrastructure" target="1.8" />
+      <module name="common-trigger" target="1.8" />
+      <module name="common-types" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -30,6 +39,13 @@
       <module name="common-infrastructure" options="-parameters" />
       <module name="common-trigger" options="-parameters" />
       <module name="common-types" options="-parameters" />
+      <module name="university" options="-parameters" />
+      <module name="university-api" options="-parameters" />
+      <module name="university-app" options="-parameters" />
+      <module name="university-domain" options="-parameters" />
+      <module name="university-infrastructure" options="-parameters" />
+      <module name="university-trigger" options="-parameters" />
+      <module name="university-types" options="-parameters" />
       <module name="user" options="-parameters" />
       <module name="user-api" options="-parameters" />
       <module name="user-app" options="-parameters" />

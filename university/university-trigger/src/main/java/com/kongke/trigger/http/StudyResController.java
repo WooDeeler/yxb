@@ -1,6 +1,7 @@
 package com.kongke.trigger.http;
 
 import com.kongke.domain.univ.model.dto.ConditionReq;
+import com.kongke.domain.univ.model.dto.PageQueryRsp;
 import com.kongke.domain.univ.model.vo.StudyResVO;
 import com.kongke.domain.univ.service.StudyResService;
 import com.kongke.types.common.Result;
@@ -28,7 +29,7 @@ public class StudyResController {
      * @return {@link Result }<{@link Boolean }>
      */
     @PostMapping("/query")
-    public Result<List<StudyResVO>> query(@RequestBody ConditionReq req) {
+    public Result<PageQueryRsp<StudyResVO>> query(@RequestBody ConditionReq req) {
         return Result.success(studyResService.query(req));
     }
 
