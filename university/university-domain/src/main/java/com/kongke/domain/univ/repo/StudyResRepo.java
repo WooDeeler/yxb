@@ -11,4 +11,6 @@ public interface StudyResRepo {
     PageQueryRsp<StudyResEntity> query(ConditionReq req);
 
     boolean delete(Integer id);
+
+    boolean add(StudyResVO vo);
 }

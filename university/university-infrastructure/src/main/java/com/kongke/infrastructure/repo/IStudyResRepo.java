@@ -47,4 +47,9 @@ public class IStudyResRepo implements StudyResRepo {
     public boolean delete(Integer id) {
         return studyResDao.removeById(id);
     }
+
+    @Override
+    public boolean add(StudyResVO vo) {
+      return studyResDao.save(Convert.convert(vo, StudyResPO.class));
+    }
 }

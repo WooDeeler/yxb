@@ -26,6 +26,10 @@ spring:
     password: ruanjian123 # 密码（没有则省略）
     database: 0           # 数据库索引（0-15）
     timeout: 3000         # 连接超时（毫秒）
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
 
 dubbo:
   application:

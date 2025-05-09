@@ -41,6 +41,6 @@ public class StudyResService {
     }
 
     public boolean add(StudyResVO vo) {
-        return false;
+        return studyResRepo.add(vo);
     }
 }
