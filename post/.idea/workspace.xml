@@ -7,7 +7,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad35d625-08d4-49dd-8491-67791d7ae15b" name="更改" comment="feat: 帖子联调" />
+    <list default="true" id="ad35d625-08d4-49dd-8491-67791d7ae15b" name="更改" comment="feat: 帖子联调">
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/handler/NettyConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/handler/WebSocketIdleStateHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/handler/WebSocketServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/handler/WebSocketServerInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/handler/WebSocketTextHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/model/dto/HeartbeatMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/model/dto/RegisterMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/model/dto/TextMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/model/dto/UserChatDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/chat/service/SendMessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-trigger/src/main/java/com/kongke/trigger/http/SendMsgController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-trigger/src/main/java/com/kongke/trigger/http/UserChatController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-types/src/main/java/com/kongke/types/enums/MessageTypeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat/chat-app/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat/chat-app/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat/chat-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat/chat-app/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat/chat-domain/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat/chat-domain/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat/chat-domain/src/main/java/com/kongke/domain/padding" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat/chat-trigger/src/main/java/com/kongke/trigger/http/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../chat/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/post-app/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/entity/CommentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/entity/CommentEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/vo/CommentVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/vo/CommentVO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/CommentPO.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/CommentPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../user/user-app/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../user/user-app/src/main/resources/application-dev.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

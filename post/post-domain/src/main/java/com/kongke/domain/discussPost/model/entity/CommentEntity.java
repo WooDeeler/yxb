@@ -33,4 +33,9 @@ public class CommentEntity {
      */
     private Integer pid;
 
+    /**
+     * 父评论名称
+     */
+    private String superName;
+
 }

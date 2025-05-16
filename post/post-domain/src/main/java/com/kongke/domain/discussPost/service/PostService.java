@@ -11,7 +11,6 @@ import com.kongke.domain.discussPost.model.vo.PostVO;
 import com.kongke.domain.discussPost.repository.PostRepository;
 import com.kongke.types.common.PageParam;
 import org.apache.dubbo.config.annotation.DubboReference;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -32,6 +31,7 @@ public class PostService {
     @Autowired
     private PostRepository postRepository;
 
+//    @DubboReference(check = false, application = "user-service-provider", url = "127.0.0.1:20880")
     @DubboReference(check = false, application = "user-service-provider")
     private IUserService userService;
 

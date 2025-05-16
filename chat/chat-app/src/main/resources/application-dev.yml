@@ -1,5 +1,9 @@
 server:
   port: 8591
+websocket:
+  netty:
+    port: 8581
+    path: /websocket
 
 # 线程池配置
 #thread:
@@ -73,5 +77,5 @@ mybatis-plus:
 # 日志
 logging:
   level:
-    root: info
+    root: debug
 #  config: classpath:logback-spring.xml

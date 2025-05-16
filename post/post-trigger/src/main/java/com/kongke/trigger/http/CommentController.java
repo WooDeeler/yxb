@@ -28,7 +28,7 @@ public class CommentController {
      * @param postId 帖子 ID
      * @return {@link Result }<{@link List }<{@link CommentVO }>>
      */
-    @GetMapping("/comments")
+    @PostMapping("/comments")
     public Result<List<CommentVO>> getComments(@RequestParam("postId") Long postId) {
         return Result.success(commentService.getComments(postId));
     }
