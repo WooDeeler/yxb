@@ -1,5 +1,7 @@
 package com.kongke.trigger.http;
 
+import com.kongke.domain.discussPost.model.dto.ConditionReq;
+import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.vo.PostVO;
 import com.kongke.domain.discussPost.service.PostService;
 import com.kongke.types.common.PageParam;
@@ -29,9 +31,19 @@ public class PostController {
      * @return 帖子列表
      */
     @PostMapping("/list")
-    public Result<List<PostVO>> getPosts(@RequestBody PageParam page) {
-        List<PostVO> posts = postService.getPostList(page);
-        return Result.success(posts);
+    public Result<PageQueryRsp<PostVO>> getPosts(@RequestBody PageParam page) {
+        return Result.success(postService.getPostList(page));
+    }
+
+    /**
+     * 帖子搜索
+     *
+     * @param req 要求
+     * @return {@link Result }<{@link PageQueryRsp }<{@link PostVO }>>
+     */
+    @PostMapping("/cond")
+    public Result<PageQueryRsp<PostVO>> condQuery(@RequestBody ConditionReq req) {
+        return Result.success(postService.condQuery(req));
     }
 
     /**

@@ -1,6 +1,8 @@
 package com.kongke.domain.discussPost.repository;
 
 
+import com.kongke.domain.discussPost.model.dto.ConditionReq;
+import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.entity.PostEntity;
 import com.kongke.domain.discussPost.model.vo.PostVO;
 import com.kongke.types.common.PageParam;
@@ -16,7 +18,7 @@ import java.util.List;
 public interface PostRepository {
 
 
-    List<PostEntity> getPostList(PageParam page);
+    PageQueryRsp<PostEntity> getPostList(PageParam page);
 
     // 创建帖子
     boolean createPost(PostVO vo);
@@ -30,4 +32,6 @@ public interface PostRepository {
     PostEntity getPostById(Long postId);
 
     List<PostEntity> getPostByUid(Integer uid);
+
+    PageQueryRsp<PostEntity> condQuery(ConditionReq req);
 }

@@ -1,6 +1,9 @@
 package com.kongke.infrastructure.persistent.repository;
 
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.kongke.domain.discussPost.model.dto.ConditionReq;
+import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.entity.PostEntity;
 import com.kongke.domain.discussPost.model.vo.PostVO;
 import com.kongke.domain.discussPost.repository.PostRepository;
@@ -42,23 +45,31 @@ public class IPostRepository implements PostRepository {
         return entity;
     }
 
+    public String imagesJoin(List<String> list){
+        return String.join(", ", list);
+    }
+
     @Override
-    public List<PostEntity> getPostList(PageParam page) {
+    public PageQueryRsp<PostEntity> getPostList(PageParam page) {
         if (page == null)
-            return Collections.emptyList();
+            return new PageQueryRsp<>();
         Page<PostPO> pageParam = new Page<>(page.getPage(), page.getSize());
-        Page<PostPO> poPage = postDao.page(pageParam);
+        LambdaQueryWrapper<PostPO> wrapper = new LambdaQueryWrapper<>();
+        wrapper.orderByDesc(PostPO::getUpdateTime);
+        Page<PostPO> poPage = postDao.page(pageParam, wrapper);
         if (poPage.getRecords().isEmpty()) {
-            return Collections.emptyList();
+            return new PageQueryRsp<>();
         }
-        return poPage.getRecords().stream()
+        List<PostEntity> collect = poPage.getRecords().stream()
                 .map(this::convertToEntity)
                 .collect(Collectors.toList());
+        return new PageQueryRsp<>(poPage.getTotal(), collect);
     }
 
     @Override
     public boolean createPost(PostVO vo) {
         PostPO po = VOConvertToPO(vo);
+        po.setImageList(imagesJoin(vo.getImageList()));
         return postDao.save(po);
     }
 
@@ -83,6 +94,7 @@ public class IPostRepository implements PostRepository {
     public List<PostEntity> getPostByUid(Integer uid) {
         LambdaQueryWrapper<PostPO> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(PostPO::getAuthorId, uid);
+        wrapper.orderByDesc(PostPO::getUpdateTime);
         List<PostPO> postPOList = postDao.list(wrapper);
         if (postPOList.isEmpty()) {
             return Collections.emptyList();
@@ -90,6 +102,25 @@ public class IPostRepository implements PostRepository {
         return postPOList.stream()
                 .map(this::convertToEntity)
                 .collect(Collectors.toList());
+
+    }
+
+    @Override
+    public PageQueryRsp<PostEntity> condQuery(ConditionReq req) {
+        if (StrUtil.isBlank(req.getTitle()) && StrUtil.isBlank(req.getTag()))
+            return new PageQueryRsp<>();
+        LambdaQueryWrapper<PostPO> wrapper = new LambdaQueryWrapper<>();
+        wrapper.like(StrUtil.isNotBlank(req.getTitle()),PostPO::getTitle, req.getTitle());
+        wrapper.like(StrUtil.isNotBlank(req.getTag()), PostPO::getTags, req.getTag());
+        wrapper.orderByDesc(PostPO::getUpdateTime);
+        List<PostPO> list = postDao.list(wrapper);
+        if (list.isEmpty()) {
+            return new PageQueryRsp<>();
+        }
+        List<PostEntity> collect = list.stream()
+                .map(this::convertToEntity)
+                .collect(Collectors.toList());
+        return new PageQueryRsp<>((long) list.size(), collect);
 
     }
 }
