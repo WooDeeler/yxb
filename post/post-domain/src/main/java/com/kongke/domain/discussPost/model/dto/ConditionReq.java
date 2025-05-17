@@ -20,6 +20,11 @@ public class ConditionReq {
     private String title;
 
     /**
+     * 主题
+     */
+    private String theme;
+
+    /**
      * 标签
      */
     private String tag;

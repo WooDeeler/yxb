@@ -1,5 +1,6 @@
 package com.kongke.trigger.http;
 
+import com.kongke.domain.discussPost.model.dto.ConditionReq;
 import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.vo.NewsVO;
 import com.kongke.domain.discussPost.service.NewsService;
@@ -33,6 +34,17 @@ public class NewsController {
     @PostMapping("/list")
     public Result<PageQueryRsp<NewsVO>> listNews(@RequestBody PageParam pageParam) {
         return Result.success(service.listNews(pageParam));
+    }
+
+    /**
+     * 搜索新闻
+     *
+     * @param req 要求
+     * @return {@link Result }<{@link PageQueryRsp }<{@link NewsVO }>>
+     */
+    @PostMapping("/cond")
+    public Result<PageQueryRsp<NewsVO>> condQuery(@RequestBody ConditionReq req){
+        return Result.success(service.condQuery(req));
     }
 
     /**

@@ -3,6 +3,7 @@ package com.kongke.domain.discussPost.service;
 import cn.hutool.core.bean.BeanUtil;
 import com.kongke.api.IUniversityService;
 import com.kongke.api.IUserService;
+import com.kongke.domain.discussPost.model.dto.ConditionReq;
 import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.entity.NewsEntity;
 import com.kongke.domain.discussPost.model.vo.NewsVO;
@@ -52,5 +53,17 @@ public class NewsService {
         NewsVO vo = new NewsVO();
         BeanUtil.copyProperties(entity, vo);
         return vo;
+    }
+
+    public PageQueryRsp<NewsVO> condQuery(ConditionReq req) {
+        PageQueryRsp<NewsEntity> rsp =  newsRepository.query(req);
+        List<NewsEntity> entities = rsp.getList();
+        List<NewsVO> vos = new ArrayList<>();
+        for(NewsEntity e : entities) {
+            NewsVO vo = new NewsVO();
+            BeanUtil.copyProperties(e, vo);
+            vos.add(vo);
+        }
+        return new PageQueryRsp<>(rsp.getTotal(), vos);
     }
 }
