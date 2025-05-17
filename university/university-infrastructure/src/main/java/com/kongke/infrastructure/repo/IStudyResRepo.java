@@ -2,6 +2,7 @@ package com.kongke.infrastructure.repo;
 
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.NumberUtil;
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.kongke.domain.univ.model.dto.ConditionReq;
@@ -29,6 +30,7 @@ public class IStudyResRepo implements StudyResRepo {
     public PageQueryRsp<StudyResEntity> query(ConditionReq req) {
         Page<StudyResPO> page = new Page<>(req.getPage(), req.getSize());
         LambdaQueryWrapper<StudyResPO> wrapper = new LambdaQueryWrapper<>();
+        wrapper.like(StrUtil.isNotBlank(req.getFileName()), StudyResPO::getName, req.getFileName());
         wrapper.eq(req.getFileType() != null,StudyResPO::getFileType, req.getFileType());
         wrapper.eq(req.getMaterialType() != null, StudyResPO::getMaterialType, req.getMaterialType());
         wrapper.orderByDesc(StudyResPO::getUpdateTime);
