@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * 
@@ -27,7 +28,7 @@ public class PostVO implements Serializable {
      * 帖子作者的用户 ID，关联 users 表的 id 字段
      */
     private Integer authorId;
-    private String userName;
+    private String username;
     private String avatar;
     private String userUniversity;
     private boolean isLiked;
@@ -55,7 +56,7 @@ public class PostVO implements Serializable {
     /**
      * 帖子中包含的图片列表，存储图片的路径或 URL
      */
-    private String imageList;
+    private List<String> imageList;
 
     /**
      * 帖子的评论列表，可存储评论的相关信息

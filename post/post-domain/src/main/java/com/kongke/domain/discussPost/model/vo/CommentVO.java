@@ -26,11 +26,14 @@ public class CommentVO {
     /**
      * 评论发布时间，默认为当前时间
      */
-    private Date createTime;
+    private String createTime;
 
     /**
-     * 父评论的 ID，用于实现多级评论，关联 comments 表的 id 字段
+     * 父评论uname
      */
-    private Integer pid;
+    private String superName;
+
+    private String avatar;
+    private String username;
 
 }

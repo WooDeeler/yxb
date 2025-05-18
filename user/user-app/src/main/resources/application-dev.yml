@@ -52,5 +52,6 @@ mybatis-plus:
 logging:
   level:
     root: info
+    org.apache.dubbo: DEBUG
 #  config: classpath:logback-spring.xml
 

@@ -39,6 +39,10 @@ public class ConditionReq {
 
 
     /**
+     * 文件名
+     */
+    private String fileName;
+    /**
      * 文件类型
      */
     private Integer fileType;

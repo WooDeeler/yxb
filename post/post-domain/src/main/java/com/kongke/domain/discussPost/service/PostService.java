@@ -1,20 +1,23 @@
 package com.kongke.domain.discussPost.service;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.StrUtil;
 import com.kongke.api.IUserService;
 import com.kongke.api.dto.UserDTO;
+import com.kongke.domain.discussPost.model.dto.ConditionReq;
+import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.entity.PostEntity;
 import com.kongke.domain.discussPost.model.vo.PostVO;
 import com.kongke.domain.discussPost.repository.PostRepository;
 import com.kongke.types.common.PageParam;
 import org.apache.dubbo.config.annotation.DubboReference;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -28,13 +31,25 @@ public class PostService {
     @Autowired
     private PostRepository postRepository;
 
+//    @DubboReference(check = false, application = "user-service-provider", url = "127.0.0.1:20880")
     @DubboReference(check = false, application = "user-service-provider")
     private IUserService userService;
 
-    public List<PostVO> getPostList(PageParam page) {
-        List<PostEntity> postList = postRepository.getPostList(page);
+    private List<String> imagesSplit(String str){
+        if (StrUtil.isBlank(str))
+            return new ArrayList<>();
+        return Stream.of(str.split(",")).collect(Collectors.toList());
+    }
+
+
+    public PageQueryRsp<PostVO> getPostList(PageParam page) {
+        PageQueryRsp<PostEntity> rsp = postRepository.getPostList(page);
+        List<PostEntity> postList = rsp.getList();
         List<PostVO> res = new ArrayList<>();
         List<Integer> uids = new ArrayList<>();
+        if (postList == null || postList.isEmpty()) {
+            return new PageQueryRsp<>(0L, res);
+        }
         postList.forEach(entity -> uids.add(entity.getAuthorId()));
         Map<Integer, UserDTO> map = userService.batchQueryByIds(uids);
         for (PostEntity post : postList) {
@@ -44,12 +59,13 @@ public class PostService {
             }
             PostVO postVO = new PostVO();
             BeanUtil.copyProperties(post, postVO);
-            postVO.setUserName(dto.getUsername());
+            postVO.setImageList(imagesSplit(post.getImageList()));
+            postVO.setUsername(dto.getUsername());
             postVO.setAvatar(dto.getAvatar());
             postVO.setUserUniversity(dto.getTargetUniversity());
             res.add(postVO);
         }
-        return res;
+        return new PageQueryRsp<>(rsp.getTotal(), res);
     }
 
     public boolean createPost(PostVO vo) {
@@ -72,7 +88,8 @@ public class PostService {
         PostVO vo = new PostVO();
         UserDTO dto = userService.getUserById(entity.getAuthorId());
         BeanUtil.copyProperties(entity, vo);
-        vo.setUserName(dto.getUsername());
+        vo.setImageList(imagesSplit(entity.getImageList()));
+        vo.setUsername(dto.getUsername());
         vo.setAvatar(dto.getAvatar());
         vo.setUserUniversity(dto.getTargetUniversity());
         return vo;
@@ -81,21 +98,48 @@ public class PostService {
     public List<PostVO> getPostByUid(Integer uid) {
         List<PostEntity> posts =  postRepository.getPostByUid(uid);
         List<PostVO> vos = new ArrayList<>();
-        List<Integer> uids = new ArrayList<>();
-        posts.forEach(entity -> uids.add(entity.getAuthorId()));
-        Map<Integer, UserDTO> map = userService.batchQueryByIds(uids);
+        if (posts == null || posts.isEmpty()) {
+            return vos;
+        }
+        UserDTO dto = userService.getUserById(uid);
         for (PostEntity entity : posts) {
             PostVO vo = new PostVO();
-            UserDTO dto = map.get(entity.getAuthorId());
             if (dto == null) {
                 continue;
             }
             BeanUtil.copyProperties(entity, vo);
-            vo.setUserName(dto.getUsername());
+            vo.setImageList(imagesSplit(entity.getImageList()));
+            vo.setUsername(dto.getUsername());
             vo.setAvatar(dto.getAvatar());
             vo.setUserUniversity(dto.getTargetUniversity());
             vos.add(vo);
         }
         return vos;
+    }
+
+    public PageQueryRsp<PostVO> condQuery(ConditionReq req) {
+       PageQueryRsp<PostEntity> rsp = postRepository.condQuery(req);
+        List<PostEntity> entities = rsp.getList();
+        List<PostVO> vos = new ArrayList<>();
+       List<Integer> uids = new ArrayList<>();
+       if (entities == null || entities.isEmpty()) {
+           return new PageQueryRsp<>(0L, vos);
+       }
+       entities.forEach(entity -> uids.add(entity.getAuthorId()));
+        Map<Integer, UserDTO> map = userService.batchQueryByIds(uids);
+        for (PostEntity entity : entities) {
+            UserDTO dto = map.get(entity.getAuthorId());
+            if (dto == null) {
+                continue;
+            }
+            PostVO vo = new PostVO();
+            BeanUtil.copyProperties(entity, vo);
+            vo.setImageList(imagesSplit(entity.getImageList()));
+            vo.setUsername(dto.getUsername());
+            vo.setAvatar(dto.getAvatar());
+            vo.setUserUniversity(dto.getTargetUniversity());
+            vos.add(vo);
+        }
+        return new PageQueryRsp<>(rsp.getTotal(), vos);
     }
 }

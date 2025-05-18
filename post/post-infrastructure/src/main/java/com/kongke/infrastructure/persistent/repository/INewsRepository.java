@@ -1,8 +1,10 @@
 package com.kongke.infrastructure.persistent.repository;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.kongke.domain.discussPost.model.dto.ConditionReq;
 import com.kongke.domain.discussPost.model.dto.PageQueryRsp;
 import com.kongke.domain.discussPost.model.entity.NewsEntity;
 import com.kongke.domain.discussPost.model.entity.PostEntity;
@@ -78,5 +80,24 @@ public class INewsRepository implements NewsRepository {
     @Override
     public NewsEntity getById(Integer id) {
         return convertToEntity(newsDao.getById(id));
+    }
+
+    @Override
+    public PageQueryRsp<NewsEntity> query(ConditionReq req) {
+        if (req == null)
+            return new PageQueryRsp<>();
+        LambdaQueryWrapper<NewsPO> wrapper = new LambdaQueryWrapper<>();
+        wrapper.orderByDesc(NewsPO::getPublishTime);
+        wrapper.like(StrUtil.isNotBlank(req.getTitle()), NewsPO::getTitle, req.getTitle())
+                .like(StrUtil.isNotBlank(req.getTheme()), NewsPO::getTheme, req.getTheme());
+        Page<NewsPO> page = new Page<>(req.getPage(), req.getSize());
+        Page<NewsPO> res = newsDao.page(page, wrapper);
+        if (res.getRecords().isEmpty()) {
+            return new PageQueryRsp<>();
+        }
+        List<NewsEntity> collect = res.getRecords().stream()
+                .map(this::convertToEntity)
+                .collect(Collectors.toList());
+        return new PageQueryRsp<>(res.getTotal(), collect);
     }
 }
