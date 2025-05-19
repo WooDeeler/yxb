@@ -1,12 +1,18 @@
 package com.kongke.trigger.http;
 
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
+import com.kongke.api.dto.UserDTO;
 import com.kongke.domain.common.model.Result;
 import com.kongke.domain.userlogin.model.dto.LoginRequest;
+import com.kongke.domain.userlogin.model.dto.UserReq;
 import com.kongke.domain.userlogin.model.vo.UserVO;
 import com.kongke.domain.userlogin.service.UserService;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.kongke.domain.userlogin.utils.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +65,25 @@ public class UserController {
             @RequestParam(value = "page", defaultValue = "1") int page,
             @RequestParam(value = "size", defaultValue = "10") int size) {
         return Result.success(userService.getUsersByPage(page, size));
+    }
+
+    /**
+     * 按 ID 批量查询用户信息
+     *
+     * @param req 要求
+     * @return {@link Result }<{@link Map }<{@link Integer }, {@link UserVO }>>
+     */
+    @PostMapping("/batchUsers")
+    public Result<Map<Integer, UserVO>> batchQueryByIds(@RequestBody UserReq req) {
+        List<UserVO> vos = userService.batchQueryByIds(req.getIds());
+        if (vos.isEmpty()) {
+            return Result.error(2, "err");
+        }
+        HashMap<Integer, UserVO> map = new HashMap<>();
+        for (UserVO vo : vos) {
+            map.put(vo.getId(), vo);
+        }
+        return Result.success(map);
     }
 
     /**

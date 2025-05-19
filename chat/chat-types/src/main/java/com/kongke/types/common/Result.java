@@ -1,10 +1,13 @@
 package com.kongke.types.common;
 
+import lombok.Getter;
+
 import java.io.Serializable;
 
 /**
  * HTTP接口通用返回体
  */
+@Getter
 public class Result<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -89,26 +92,14 @@ public class Result<T> implements Serializable {
         return new Result<>(code, message);
     }
 
-    public Integer getCode() {
-        return code;
-    }
-
     public Result<T> setCode(Integer code) {
         this.code = code;
         return this;
     }
 
-    public String getMessage() {
-        return message;
-    }
-
     public Result<T> setMessage(String message) {
         this.message = message;
         return this;
-    }
-
-    public T getData() {
-        return data;
     }
 
     public Result<T> setData(T data) {
