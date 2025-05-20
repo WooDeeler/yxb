@@ -35,6 +35,9 @@ public class GroupMsgPO {
      */
     private String content;
 
+    private String userName;
+    private String avatar;
+
     /**
      * 消息发送时间，默认为当前时间
      */

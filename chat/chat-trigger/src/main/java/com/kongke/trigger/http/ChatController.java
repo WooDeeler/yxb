@@ -53,6 +53,17 @@ public class ChatController {
     }
 
     /**
+     * 查询群聊
+     *
+     * @param req 要求
+     * @return {@link Result }<{@link List }<{@link GroupListVO }>>
+     */
+    @PostMapping("/group/query")
+    public Result<List<GroupChatsVO>> queryGroup(@RequestBody ChatReq req) {
+        return  Result.success(chatService.queryGroup(req));
+    }
+
+    /**
      * 更新群聊信息
      *
      * @param groupChatsVO 群聊信息
@@ -106,6 +117,7 @@ public class ChatController {
     public Result<List<GroupListVO>> getGroupListByUserId(@RequestParam("uid") Integer uid) {
         return  Result.success(chatService.getGroupListByUserId(uid));
     }
+
 
 
 

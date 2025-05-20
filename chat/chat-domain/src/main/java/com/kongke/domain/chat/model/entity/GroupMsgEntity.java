@@ -28,6 +28,8 @@ public class GroupMsgEntity {
      * 消息的具体内容
      */
     private String content;
+    private String userName;
+    private String avatar;
 
     /**
      * 消息发送时间，默认为当前时间

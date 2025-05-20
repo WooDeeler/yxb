@@ -1,8 +1,10 @@
 package com.kongke.domain.chat.service;
 
 import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.util.StrUtil;
 import com.kongke.domain.chat.model.dto.ChatReq;
 import com.kongke.domain.chat.model.entity.GroupChatsEntity;
+import com.kongke.domain.chat.model.entity.GroupListEntity;
 import com.kongke.domain.chat.model.vo.GroupChatsVO;
 import com.kongke.domain.chat.model.vo.GroupListVO;
 import com.kongke.domain.chat.model.vo.GroupMsgVO;
@@ -20,8 +22,9 @@ public class ChatService {
     @Autowired
     private ChatRepo chatRepo;
 
-    public boolean createGroupChat(GroupChatsVO groupChatsVO) {
-        return chatRepo.createGroupChat(groupChatsVO);
+    public boolean createGroupChat(GroupChatsVO vo) {
+        vo.setMemberList(String.valueOf(vo.getOwnerId()));
+        return chatRepo.createGroupChat(vo);
     }
 
     public GroupChatsVO getGroupChatById(Integer gid) {
@@ -48,12 +51,12 @@ public class ChatService {
      * 就是更新PO的userList字段
      */
     public boolean joinGroup(ChatReq req) {
-        if (BeanUtil.hasNullField(req))
+        if (req == null || req.getGid() <= 0 || req.getUid() <= 0)
             return false;
         return chatRepo.joinGroup(req);
     }
     public boolean leaveGroup(ChatReq req) {
-        if (BeanUtil.hasNullField(req))
+        if (req == null || req.getGid() <= 0 || req.getUid() <= 0)
             return false;
         return chatRepo.leaveGroup(req);
     }
@@ -79,5 +82,11 @@ public class ChatService {
         }
         return chatRepo.getGroupMessages(gid);
 
+    }
+
+    public List<GroupChatsVO> queryGroup(ChatReq req) {
+        if (req == null || StrUtil.isBlank(req.getName()))
+            return new ArrayList<>();
+        return chatRepo.queryGroup(req);
     }
 }

@@ -8,4 +8,6 @@ public class ChatReq {
     private Integer uid;
 
     private Integer gid;
+
+    private String name;
 }

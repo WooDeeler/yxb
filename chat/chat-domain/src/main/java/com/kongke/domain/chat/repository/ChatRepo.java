@@ -29,4 +29,5 @@ public interface ChatRepo {
 
     List<GroupMsgVO> getGroupMessages(Integer gid);
 
+    List<GroupChatsVO> queryGroup(ChatReq req);
 }

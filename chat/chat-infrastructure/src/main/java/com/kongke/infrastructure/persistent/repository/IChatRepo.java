@@ -37,7 +37,17 @@ public class IChatRepo implements ChatRepo {
 
     @Override
     public boolean createGroupChat(GroupChatsVO vo) {
-        return groupChatsDao.save(Convert.convert(vo, GroupChatsPO.class));
+        boolean b = groupChatsDao.save(Convert.convert(vo, GroupChatsPO.class));
+        GroupListPO listPO = new GroupListPO();
+        LambdaQueryWrapper<GroupChatsPO> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(GroupChatsPO::getName, vo.getName());
+        GroupChatsPO one = groupChatsDao.getOne(wrapper);
+        listPO.setGroupId(one.getId());
+        listPO.setGroupName(one.getName());
+        listPO.setUserId(vo.getOwnerId());
+        listPO.setLatestTime(new Date(System.currentTimeMillis()));
+        listPO.setLatestMessage("新消息");
+        return groupListDao.save(listPO);
     }
 
     @Override
@@ -89,7 +99,11 @@ public class IChatRepo implements ChatRepo {
                     sb.append(s).append(",");
                 }
             }
-            list = sb.substring(0, sb.length() - 1);
+            if (sb.length() > 0){
+                list = sb.substring(0, sb.length() - 1);
+            }else {
+                list = "";
+            }
         }
         po.setMemberList(list);
         groupListDao.remove(new LambdaQueryWrapper<GroupListPO>()
@@ -133,5 +147,15 @@ public class IChatRepo implements ChatRepo {
             return vos;
         }
         return Collections.emptyList();
+    }
+
+    @Override
+    public List<GroupChatsVO> queryGroup(ChatReq req) {
+        List<GroupChatsPO> list = groupChatsDao.list(new LambdaQueryWrapper<GroupChatsPO>().like(GroupChatsPO::getName, req.getName()));
+        ArrayList<GroupChatsVO> vos = new ArrayList<>();
+        for (GroupChatsPO po : list) {
+            vos.add(Convert.convert(po, GroupChatsVO.class));
+        }
+        return vos;
     }
 }
