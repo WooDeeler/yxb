@@ -1,5 +1,6 @@
 package com.kongke.domain.univ.service;
 
+import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.core.util.StrUtil;
 import com.kongke.domain.univ.model.dto.ConditionReq;
@@ -27,7 +28,7 @@ public class MajorService {
     private UniversityRepo universityRepo;
 
     public boolean add(MajorVO vo) {
-        if (vo == null || vo.getUniversityId() == null || vo.getUniversityName().isEmpty())
+        if (vo == null || vo.getUniversityId() == null || StrUtil.isBlank(vo.getUniversityName()))
             return false;
         return majorRepo.save(vo);
     }
