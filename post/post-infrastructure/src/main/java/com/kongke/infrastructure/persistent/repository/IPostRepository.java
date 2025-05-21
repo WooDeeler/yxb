@@ -19,6 +19,7 @@ import cn.hutool.core.bean.BeanUtil;
 import javax.annotation.Resource;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 @Service
@@ -46,7 +47,7 @@ public class IPostRepository implements PostRepository {
     }
 
     public String imagesJoin(List<String> list){
-        return String.join(", ", list);
+        return String.join(",", list);
     }
 
     @Override
@@ -56,6 +57,7 @@ public class IPostRepository implements PostRepository {
         Page<PostPO> pageParam = new Page<>(page.getPage(), page.getSize());
         LambdaQueryWrapper<PostPO> wrapper = new LambdaQueryWrapper<>();
         wrapper.orderByDesc(PostPO::getUpdateTime);
+        wrapper.eq(PostPO::getComments, "1");
         Page<PostPO> poPage = postDao.page(pageParam, wrapper);
         if (poPage.getRecords().isEmpty()) {
             return new PageQueryRsp<>();
@@ -76,6 +78,7 @@ public class IPostRepository implements PostRepository {
     @Override
     public boolean updatePost(PostVO vo) {
         PostPO po = VOConvertToPO(vo);
+        po.setImageList(imagesJoin(vo.getImageList()));
         return postDao.updateById(po);
     }
 
@@ -107,11 +110,12 @@ public class IPostRepository implements PostRepository {
 
     @Override
     public PageQueryRsp<PostEntity> condQuery(ConditionReq req) {
-        if (StrUtil.isBlank(req.getTitle()) && StrUtil.isBlank(req.getTag()))
+        if (StrUtil.isBlank(req.getType()) || (Objects.equals(req.getType(), "1") && StrUtil.isBlank(req.getTitle())))
             return new PageQueryRsp<>();
         LambdaQueryWrapper<PostPO> wrapper = new LambdaQueryWrapper<>();
         wrapper.like(StrUtil.isNotBlank(req.getTitle()),PostPO::getTitle, req.getTitle());
         wrapper.like(StrUtil.isNotBlank(req.getTag()), PostPO::getTags, req.getTag());
+        wrapper.eq(StrUtil.isNotBlank(req.getType()), PostPO::getComments, req.getType());
         wrapper.orderByDesc(PostPO::getUpdateTime);
         List<PostPO> list = postDao.list(wrapper);
         if (list.isEmpty()) {

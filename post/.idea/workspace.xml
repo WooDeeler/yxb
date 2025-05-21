@@ -8,11 +8,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad35d625-08d4-49dd-8491-67791d7ae15b" name="更改" comment="feat: 帖子联调">
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/dto/ConditionReq.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/model/dto/ConditionReq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/repository/NewsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/repository/NewsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/NewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-domain/src/main/java/com/kongke/domain/discussPost/service/NewsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/INewsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/INewsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-trigger/src/main/java/com/kongke/trigger/http/NewsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-app/src/main/resources/mybatis/mapper/GroupChatsMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-app/src/main/resources/mybatis/mapper/GroupListMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-app/src/main/resources/mybatis/mapper/GroupMsgMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupChatsDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupChatsDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupListDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupListDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupMsgDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupMsgDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/GroupChatsMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/GroupListMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/GroupMsgMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/GroupChatsPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/GroupListPO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/GroupMsgPO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IPostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IPostRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
