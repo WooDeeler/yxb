@@ -47,7 +47,7 @@ public class IPostRepository implements PostRepository {
     }
 
     public String imagesJoin(List<String> list){
-        return String.join(", ", list);
+        return String.join(",", list);
     }
 
     @Override
@@ -78,6 +78,7 @@ public class IPostRepository implements PostRepository {
     @Override
     public boolean updatePost(PostVO vo) {
         PostPO po = VOConvertToPO(vo);
+        po.setImageList(imagesJoin(vo.getImageList()));
         return postDao.updateById(po);
     }
 
