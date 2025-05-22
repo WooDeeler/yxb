@@ -11,7 +11,7 @@ bin-release/
 .idea/
 **/.idea/
 **/.vscode/
-**/docs/
+**/docs/*.jar
 *.iml
 .github/
 # Executables
