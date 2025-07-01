@@ -17,10 +17,10 @@ import java.net.URLEncoder;
 public class FileUtil {
 
     // 阿里云OSS配置
-    private static final String ENDPOINT = "https://oss-cn-hangzhou.aliyuncs.com";
-    private static final String ACCESS_KEY_ID = "LTAI5tMVrC1Yjnxi7cWgifqe";
-    private static final String ACCESS_KEY_SECRET = "4Pwifa6rEWwF4qmEABW5FHMsTjL01w";
-    private static final String BUCKET_NAME = "pic-buc";
+    private static final String ENDPOINT = "x";
+    private static final String ACCESS_KEY_ID = "x";
+    private static final String ACCESS_KEY_SECRET = "x";
+    private static final String BUCKET_NAME = "x";
 
     public static OSS BuildOssClient(){
         return new OSSClientBuilder().build(ENDPOINT, ACCESS_KEY_ID, ACCESS_KEY_SECRET);
