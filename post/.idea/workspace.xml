@@ -7,24 +7,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad35d625-08d4-49dd-8491-67791d7ae15b" name="更改" comment="feat: 帖子联调">
-      <change afterPath="$PROJECT_DIR$/../chat/chat-app/src/main/resources/mybatis/mapper/GroupChatsMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-app/src/main/resources/mybatis/mapper/GroupListMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-app/src/main/resources/mybatis/mapper/GroupMsgMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupChatsDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupChatsDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupListDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupListDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupMsgDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/dao/GroupMsgDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/GroupChatsMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/GroupListMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/mapper/GroupMsgMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/GroupChatsPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/GroupListPO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../chat/chat-infrastructure/src/main/java/com/kongke/infrastructure/persistent/po/GroupMsgPO.java" afterDir="false" />
+    <list default="true" id="ad35d625-08d4-49dd-8491-67791d7ae15b" name="更改" comment="feat: 联调完成">
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IPostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/post-infrastructure/src/main/java/com/kongke/infrastructure/persistent/repository/IPostRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +30,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="PerforceDirect.Settings">
-    <option name="CHARSET" value="无" />
-  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="ProjectErrors" />
   </component>
@@ -60,43 +45,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
-    "Maven.post [clean].executor": "Run",
-    "Maven.post [install].executor": "Run",
-    "Maven.post [package].executor": "Run",
-    "Maven.post [validate].executor": "Run",
-    "Maven.post-api [clean].executor": "Run",
-    "Maven.post-api [package].executor": "Run",
-    "Maven.post-app [clean].executor": "Run",
-    "Maven.post-app [package].executor": "Run",
-    "Maven.post-domain [clean].executor": "Run",
-    "Maven.post-domain [install].executor": "Run",
-    "Maven.user-api [clean].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.Application.executor": "Run",
-    "git-widget-placeholder": "develop",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/mico/IdeaProjects/yxb/post/docs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.32413793",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Confirmation",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post-api [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post-api [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post-app [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post-app [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post-domain [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.post-domain [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-api [clean].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.Application.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mico/IdeaProjects/yxb/post/docs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.32413793&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Confirmation&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs" />
@@ -144,6 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744267521244</updated>
       <workItem from="1744267522270" duration="24491000" />
+      <workItem from="1751357895973" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 帖子联调">
       <option name="closed" value="true" />
@@ -153,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747361531335</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: 联调完成">
+      <option name="closed" value="true" />
+      <created>1747798354684</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747798354684</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +167,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: 帖子联调" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 帖子联调" />
+    <MESSAGE value="feat: 联调完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 联调完成" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
